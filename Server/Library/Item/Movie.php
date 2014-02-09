@@ -42,13 +42,13 @@ class Plex_Server_Library_Item_Movie
 	 * Studio that released the movie.
 	 * @var string
 	 */
-	private $studio;
+	public $studio;
 	
 	/**
 	 * Tagline of the movie.
 	 * @var string
 	 */
-	private $tagline;
+	public $tagline;
 	
 	/**
 	 * Sets an array of attributes, if they exist, to the corresponding class

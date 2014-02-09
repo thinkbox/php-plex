@@ -44,7 +44,7 @@ abstract class Plex_Server_Library_ItemGrandparentAbstract
 	 * Reference to the item's art.
 	 * @var string
 	 */
-	protected $art;
+	public $art;
 	
 	/**
 	 * Number of child items (Plex_Server_Library_ItemChildAbstract) that are
@@ -53,32 +53,32 @@ abstract class Plex_Server_Library_ItemGrandparentAbstract
 	 * tracks.
 	 * @var integer
 	 */
-	protected $leafCount;
+	public $leafCount;
 	
 	/**
 	 * Number of child items that have been viewed.
 	 * @var integer
 	 */
-	protected $viewedLeafCount;
+	public $viewedLeafCount;
 	
 	/**
 	 * Year the item was released.
 	 * @var integer
 	 */
-	protected $year;
+	public $year;
 	
 	/**
 	 * Third party rating of the item.
 	 * @var float
 	 */
-	protected $rating;
+	public $rating;
 	
 	/**
 	 * Content rating of the item. For shows it might be 'TV-PG' and for movies
 	 * it might be something like 'PG-13.'
 	 * @var string
 	 */
-	protected $contentRating;
+	public $contentRating;
 	
 	/**
 	 * Sets an array of attribues, if they exist, to the corresponding class

@@ -42,61 +42,61 @@ class Plex_Server_Library_Item_Media
 	 * ID of the media info.
 	 * @var integer
 	 */
-	private $id;
+	public $id;
 	
 	/**
 	 * Length of the file in milliseconds.
 	 * @var integer
 	 */
-	private $duration;
+	public $duration;
 	
 	/**
 	 * Bitrate of the file in kilobytes per second.
 	 * @var integer
 	 */
-	private $bitrate;
+	public $bitrate;
 	
 	/**
 	 * Width of the file's video in pixels.
 	 * @var integer
 	 */
-	private $width;
+	public $width;
 	
 	/**
 	 * Height of the file's video in pixels.
 	 * @var integer
 	 */
-	private $height;
+	public $height;
 	
 	/**
 	 * Aspect ration of the file's video.
 	 * @var float
 	 */
-	private $aspectRatio;
+	public $aspectRatio;
 	
 	/**
 	 * Resolution of the file's video.
 	 * @var integer
 	 */
-	private $videoResolution;
+	public $videoResolution;
 	
 	/**
 	 * Container of the file.
 	 * @var string
 	 */
-	private $container;
+	public $container;
 	
 	/**
 	 * Frame rate of the file's video.
 	 * @var string
 	 */
-	private $videoFrameRate;
+	public $videoFrameRate;
 	
 	/**
 	 * The files associated with the item.
 	 * @var Plex_Server_Library_Item_Media_File[]
 	 */
-	private $files;
+	public $files;
 	
 	/**
 	 * Sets an array of media info to their corresponding class members.

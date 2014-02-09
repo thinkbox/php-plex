@@ -42,37 +42,37 @@ class Plex_Server_Library_Item_Media_File
 	 * The ID of the file.
 	 * @var integer
 	 */
-	private $id;
+	public $id;
 	
 	/**
 	 * The key of the file.
 	 * @var string
 	 */
-	private $key;
+	public $key;
 	
 	/**
 	 * The duration of the file in milliseconds.
 	 * @var integer
 	 */
-	private $duration;
+	public $duration;
 	
 	/**
 	 * Full path to the file.
 	 * @var string
 	 */
-	private $file;
+	public $file;
 	
 	/**
 	 * Size of the file in bytes.
 	 * @var integer
 	 */
-	private $size;
+	public $size;
 	
 	/**
 	 * Container of the file.
 	 * @var string
 	 */
-	private $container;
+	public $container;
 
 	/**
 	 * Sets an array of file info to their corresponding class members.

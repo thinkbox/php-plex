@@ -146,7 +146,7 @@ class Plex_Server_Library extends Plex_Server
 	 *
 	 * return Plex_Server_Library_Item[] An array of plex library items.
 	 */
-	protected function getItems($endpoint)
+	public function getItems($endpoint)
 	{
 		$items = array();
 		$itemArray = $this->makeCall($this->buildUrl($endpoint));

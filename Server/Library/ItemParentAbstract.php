@@ -46,37 +46,37 @@ abstract class Plex_Server_Library_ItemParentAbstract
 	 * string.
 	 * @var integer
 	 */
-	protected $parentRatingKey;
+	public $parentRatingKey;
 	
 	/**
 	 * Parent item's key.
 	 * @var string
 	 */
-	protected $parentKey;
+	public $parentKey;
 
 	/**
 	 * Parent item's title.
 	 * @var string
 	 */
-	protected $parentTitle;
+	public $parentTitle;
 	
 	/**
 	 * Parent item's index.
 	 * @var integer
 	 */
-	protected $parentIndex;
+	public $parentIndex;
 	
 	/**
 	 * Reference to the parent item's thumb.
 	 * @var string
 	 */
-	protected $parentThumb;
+	public $parentThumb;
 	
 	/**
 	 * Date the item was made originally available.
 	 * @var DateTime
 	 */
-	protected $originallyAvailalbleAt;
+	public $originallyAvailalbleAt;
 	
 	/**
 	 * Sets an array of attribues, if they exist, to the corresponding class

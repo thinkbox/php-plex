@@ -43,67 +43,67 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 * Reference to the art section's art.
 	 * @var string
 	 */
-	protected $art;
+	public $art;
 	
 	/**
 	 * Boolean saying whether or not the section is currently refreshing.
 	 * @var boolean
 	 */
-	protected $refreshing;
+	public $refreshing;
 	
 	/**
 	 * The section's key.
 	 * @var integer
 	 */
-	protected $key;
+	public $key;
 	
 	/**
 	 * The section's type.
 	 * @var string
 	 */
-	protected $type;
+	public $type;
 	
 	/**
 	 * The section's title.
 	 * @var string
 	 */
-	protected $title;
+	public $title;
 	
 	/**
 	 * The metadata agent for the sectiion.
 	 * @var string
 	 */
-	protected $agent;
+	public $agent;
 	
 	/**
 	 * The type of scanner for the section.
 	 * @var string
 	 */
-	protected $scanner;
+	public $scanner;
 	
 	/**
 	 * The section's language.
 	 * @var string
 	 */
-	protected $language;
+	public $language;
 	
 	/**
 	 * Universally unique identifier for the section.
 	 * @var string
 	 */
-	protected $uuid;
+	public $uuid;
 	
 	/**
 	 * Date the section was last updated.
 	 * @var DateTime
 	 */
-	protected $updatedAt;
+	public $updatedAt;
 
 	/**
 	 * Date the section was created.
 	 * @var DateTime
 	 */
-	protected $createdAt;
+	public $createdAt;
 	
 	/**
 	 * Endpoint for retrieving all items for a section.
@@ -300,7 +300,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 *
 	 * return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
 	 */
-	protected function getAllItems()
+	public function getAllItems()
 	{
 		return $this->getItems(
 			$this->buildEndpoint(self::ENDPOINT_CATEGORY_ALL)
@@ -317,7 +317,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 *
 	 * return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
 	 */
-	protected function getUnwatchedItems()
+	public function getUnwatchedItems()
 	{
 		return $this->getItems(
 			$this->buildEndpoint(self::ENDPOINT_CATEGORY_UNWATCHED)
@@ -334,7 +334,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 *
 	 * return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
 	 */
-	protected function getNewestItems()
+	public function getNewestItems()
 	{
 		return $this->getItems(
 			$this->buildEndpoint(self::ENDPOINT_CATEGORY_NEWEST)
@@ -352,7 +352,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 *
 	 * return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
 	 */
-	protected function getRecentlyAddedSectionItems()
+	public function getRecentlyAddedSectionItems()
 	{
 		return $this->getItems(
 			$this->buildEndpoint(self::ENDPOINT_CATEGORY_RECENTLY_ADDED)
@@ -370,7 +370,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 *
 	 * return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
 	 */
-	protected function getOnDeckSectionItems()
+	public function getOnDeckSectionItems()
 	{
 		return $this->getItems(
 			$this->buildEndpoint(self::ENDPOINT_CATEGORY_ON_DECK)
@@ -387,7 +387,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 *
 	 * return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
 	 */
-	protected function getRecentlyViewedItems()
+	public function getRecentlyViewedItems()
 	{
 		return $this->getItems(
 			$this->buildEndpoint(self::ENDPOINT_CATEGORY_RECENTLY_VIEWED)
@@ -408,7 +408,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 *
 	 * return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
 	 */
-	protected function getItemsByCollection($collectionKey)
+	public function getItemsByCollection($collectionKey)
 	{
 		return $this->getItems(
 			$this->buildEndpoint(
@@ -434,7 +434,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 *
 	 * return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
 	 */
-	protected function getItemsByFirstCharacter($character)
+	public function getItemsByFirstCharacter($character)
 	{
 		return $this->getItems(
 			$this->buildEndpoint(
@@ -461,7 +461,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 *
 	 * return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
 	 */	
-	protected function getItemsByGenre($genreKey)
+	public function getItemsByGenre($genreKey)
 	{
 		return $this->getItems(
 			$this->buildEndpoint(
@@ -487,7 +487,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 *
 	 * return Plex_Server_Library_ItemAbstract[] An array of Plex library items.
 	 */	
-	protected function getItemsByYear($year)
+	public function getItemsByYear($year)
 	{
 		return $this->getItems(
 			$this->buildEndpoint(
@@ -525,7 +525,7 @@ abstract class Plex_Server_Library_SectionAbstract extends Plex_Server_Library
 	 *
 	 * @throws Plex_Exception_Server_Library()
 	 */
-	protected function getPolymorphicItem($polymorphicData, $scopedToItem = FALSE)
+	public function getPolymorphicItem($polymorphicData, $scopedToItem = FALSE)
 	{
 		if (is_int($polymorphicData)) {
 			// If we have an integer then we can assume we have a rating key.

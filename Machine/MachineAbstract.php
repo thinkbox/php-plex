@@ -40,20 +40,20 @@ abstract class Plex_MachineAbstract implements Plex_MachineInterface
 	 * The name of the Plex machine on the network.
 	 * @var string 
 	 */
-	protected $name;
+	public $name;
 	
 	/**
 	 * The IP address  of the Plex machine on the network.
 	 * @var string
 	 */
-	protected $address;
+	public $address;
 	
 	/**
 	 * The port on which the Plex machine is listening. Typically 32400 for
 	 * servers and 3000 for clients.
 	 * @var integer 
 	 */
-	protected $port;
+	public $port;
 	
 	/**
 	 * Returns the base URL, which will be standard for all requests made to the
@@ -65,7 +65,7 @@ abstract class Plex_MachineAbstract implements Plex_MachineInterface
 	 * @return string The base URL, which will be standard for all requests made
 	 * to the Plex machine.
 	 */
-	protected function getBaseUrl()
+	public function getBaseUrl()
 	{
 		return sprintf(
 			'http://%s:%s',
@@ -89,7 +89,7 @@ abstract class Plex_MachineAbstract implements Plex_MachineInterface
 	 *
 	 * @return array An associated array of XML attributes.
 	 */
-	protected function xmlAttributesToArray($xml, $pass = 0)
+	public function xmlAttributesToArray($xml, $pass = 0)
 	{
 		if (!$xml) return false;
 		
@@ -136,7 +136,7 @@ abstract class Plex_MachineAbstract implements Plex_MachineInterface
 	 *
 	 * @throws Plex_Exception_Machine
 	 */
-	protected function makeCall($url)
+	public function makeCall($url)
 	{
 		$ch = curl_init();
 		
@@ -175,7 +175,7 @@ abstract class Plex_MachineAbstract implements Plex_MachineInterface
 	 * @return string The name of the function that called the function that
 	 * issued the getCallingFunction request.
 	 */
-	protected function getCallingFunction($depth = 2)
+	public function getCallingFunction($depth = 2)
 	{
 		$backtrace = debug_backtrace();
 

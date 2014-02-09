@@ -44,37 +44,37 @@ abstract class Plex_Server_Library_ItemChildAbstract
 	 * key string.
 	 * @var integer
 	 */
-	protected $grandparentRatingKey;
+	public $grandparentRatingKey;
 	
 	/**
 	 * Grandparent item's key.
 	 * @var string
 	 */
-	protected $grandparentKey;
+	public $grandparentKey;
 	
 	/**
 	 * Grandparent item's title.
 	 * @var string
 	 */
-	protected $grandparentTitle;
+	public $grandparentTitle;
 	
 	/**
 	 * Reference to the grandparent item's thumb.
 	 * @var string
 	 */
-	protected $grandparentThumb;
+	public $grandparentThumb;
 	
 	/**
 	 * Duration of the item in seconds.
 	 * @var integer
 	 */
-	protected $duration;
+	public $duration;
 	
 	/**
 	 * How many seconds into the item of the last unfinished view.
 	 * @var integer
 	 */
-	protected $viewOffset;
+	public $viewOffset;
 	
 	/**
 	 * Sets an array of attribues, if they exist, to the corresponding class

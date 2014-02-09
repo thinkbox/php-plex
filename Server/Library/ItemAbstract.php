@@ -50,74 +50,74 @@ abstract class Plex_Server_Library_ItemAbstract
 	 * The ID of the library section to which the item belongs.
 	 * @var integer
 	 */
-	protected $librarySectionId;
+	public $librarySectionId;
 	
 	/**
 	 * Unique integer that represents an item and helps build its key string.
 	 * @var integer
 	 */
-	protected $ratingKey;
+	public $ratingKey;
 	
 	/**
 	 * Key/path to specifically identify the the single item.
 	 * @var string
 	 */
-	protected $key;
+	public $key;
 	
 	/**
 	 * Type of the item.
 	 * @var string
 	 */
-	protected $type;
+	public $type;
 	
 	/**
 	 * Title of the item.
 	 * @var string
 	 */
-	protected $title;
+	public $title;
 	
 	/**
 	 * Sorting title of the item. This is used if the item's title starts with
 	 * "The," "An," or "A."
 	 * @var string
 	 */
-	protected $titleSort;
+	public $titleSort;
 	
 	/**
 	 * Summary of the item.
 	 * @var string
 	 */
-	protected $summary;
+	public $summary;
 	
 	/**
 	 * Index of the item.
 	 * @var integer
 	 */
-	protected $index;
+	public $index;
 	
 	/**
 	 * Reference to the thumb of the item.
 	 * @var string
 	 */
-	protected $thumb;
+	public $thumb;
 	
 	/**
 	 * Date the item was added to the library.
 	 * @var DateTime
 	 */
-   	protected $addedAt;
+   	public $addedAt;
 	
 	/**
 	 * Date the item was last updated.
 	 * @var DateTime
 	 */
-	protected $updatedAt;
+	public $updatedAt;
 	
 	/**
 	 * The media info associated with a Plex item.
 	 * @var Plex_Server_Library_Item_Media
 	 */
-	protected $media;
+	public $media;
 	
 	/**
 	 * Endpoint for listing the child items of a parent or grandparent item.
@@ -279,7 +279,7 @@ abstract class Plex_Server_Library_ItemAbstract
 	 *
 	 * @return string The requested children endpoint.
 	 */
-	protected function buildChildrenEndpoint()
+	public function buildChildrenEndpoint()
 	{
 		return sprintf(
 			'%s/%d/%s',
@@ -298,7 +298,7 @@ abstract class Plex_Server_Library_ItemAbstract
 	 *
 	 * @return string The requested grandchildren endpoint.
 	 */
-	protected function buildAllLeavesEndpoint()
+	public function buildAllLeavesEndpoint()
 	{
 		return sprintf(
 			'%s/%d/%s',
